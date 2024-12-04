@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports
+                                  http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="DepartmentEmployeeReport"
+              pageWidth="595" 
+              pageHeight="842" 
+              columnWidth="555" 
+              leftMargin="20" 
+              rightMargin="20" 
+              topMargin="20" 
+              bottomMargin="20" 
+              uuid="123e4567-e89b-12d3-a456-426614174000">
+
+    <!-- Title -->
+    <title>
+        <band height="50">
+            <staticText>
+                <reportElement x="0" y="0" width="555" height="30" uuid="123e4567-e89b-12d3-a456-426614174000"/>
+                <textElement textAlignment="Center">
+                    <font size="18" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Employee Report by Department]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <!-- Parameters 	
+    <parameter name="ReportTitle" class="java.lang.String"/>
+	-->
+    <!-- Fields 
+    <field name="name" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="position" class="java.lang.String"/>
+	<field name="salary" class="java.lang.Double"/>
+	-->
+    <!-- Detail Section 
+    <detail>
+        <band height="20">
+            <textField>
+                <reportElement x="0" y="0" width="150" height="20" uuid="123e4567-e89b-12d3-a456-426614174000"/>
+                <textElement/>
+                <textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="150" y="0" width="200" height="20" uuid="123e4567-e89b-12d3-a456-426614174000"/>
+                <textElement/>
+                <textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="350" y="0" width="150" height="20" uuid="123e4567-e89b-12d3-a456-426614174000"/>
+                <textElement/>
+                <textFieldExpression><![CDATA[$F{position}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="500" y="0" width="55" height="20" uuid="123e4567-e89b-12d3-a456-426614174000"/>
+                <textElement/>
+                <textFieldExpression><![CDATA[$F{salary}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+-->
+    <!-- Page Break by Department 
+    <group name="DepartmentGroup">
+        <groupExpression><![CDATA[$F{Department}]]></groupExpression>
+        <groupHeader>
+            <band height="30">
+                <staticText>
+                    <reportElement x="0" y="0" width="555" height="30" uuid="123e4567-e89b-12d3-a456-426614174000"/>
+                    <textElement textAlignment="Left">
+                        <font size="16" isBold="true"/>
+                    </textElement>
+                    <text><![CDATA[Department: $F{position}]]></text>
+                </staticText>
+            </band>
+        </groupHeader>
+    </group>
+-->
+</jasperReport>
